@@ -19,8 +19,8 @@ $(document).ready(function() {
                     ["Knife", "Hook", "Scissors", "Axe"], picture: "./assets/images/hook.jpg",
                     correctAnswer: "Hook"},
                 {question: "In the movie Psycho, where does the most famous murder occur?", answers:
-                    ["The kitchen", "The house", "The shower", "The balcony"], picture: "./assets/images/shower.jpg",
-                    correctAnswer: "The shower"},
+                    ["the kitchen", "the house", "the shower", "the balcony"], picture: "./assets/images/shower.jpg",
+                    correctAnswer: "the shower"},
                 {question: "Where does the chainsaw massacre occur?", answers:
                     ["Ohio", "Virginia", "Louisiana", "Texas"], picture: "./assets/images/texas.jpg",
                     correctAnswer: "Texas"},
@@ -41,10 +41,10 @@ $(document).ready(function() {
     var randomQuestion;
 
     //Music playlist
-    var playlist = ["./assets/audio/Alliance.mp3",
-    "./assets/audio/Glory_of_the_Empire.mp3",
-    "./assets/audio/Yodas_Guidance.mp3",
-    "./assets/audio/Imperial_Inquisition.mp3"];
+    var playlist = ["./assets/audio/halloween.mp3",
+    "./assets/audio/nightmare.mp3",
+    "./assets/audio/psycho.mp3",
+    "./assets/audio/friday.mp3"];
 
     function bgAudio() {
         var playlist_index;
@@ -191,12 +191,13 @@ $(document).ready(function() {
         $('#next').empty();
         $('#questionNumber').html('<h2>Question Number ' + questionNumber + '</h2>');
         randomQuestion = randomInts[iterator];
-        $('#question').html('<h3>' + trivia[randomQuestion].question + '<h3>');
+        $('#question').html('<h4>' + trivia[randomQuestion].question + '<h4>');
         trivia[randomQuestion].answers.forEach(function(answer) {
             var paragraph = $('<p>');
             var label = $('<label>');
             var input = $('<input>').attr({type: "radio", name: "quiz", value: answer});
             $('#choices').append(paragraph);
+            paragraph.addClass('lead');
             paragraph.append(label);
             label.append(input);
             label.append(answer);

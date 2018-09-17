@@ -1,10 +1,17 @@
-body {
+body,html {
     background-color: black;
     color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: black;
 }
 h1 {
     font-family: 'Nosifer', cursive;
     color: #ff0000;
+    background-color: black;
 }
 div {
     margin: auto;
