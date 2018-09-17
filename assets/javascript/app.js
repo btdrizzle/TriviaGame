@@ -151,19 +151,29 @@ $(document).ready(function() {
             correct++;
             $('#choices').empty();
             $('#questionEnd').html('<h4>You got the question right!  The answer is ' + trivia[randomQuestion].correctAnswer + '.</h4>');
-            $('#next').append('<img src=' + trivia[randomQuestion].picture + '></img>');
+            var image = $('<img>');
+            image.attr('src',trivia[randomQuestion].picture);
+            image.addClass('img-fluid');
+            $('#next').append(image);
+    
         }
         else if(!$("input[name='quiz']:checked").val()) {
             unAnswered++;
             $('#choices').empty();
             $('#questionEnd').html("<h4>You didn't answer!  The answer is " + trivia[randomQuestion].correctAnswer + '.</h4>');
-            $('#next').append('<img src=' + trivia[randomQuestion].picture + '></img>');
+            var image = $('<img>');
+            image.attr('src',trivia[randomQuestion].picture);
+            image.addClass('img-fluid');
+            $('#next').append(image);
         }
         else {
             incorrect++;
             $('#choices').empty();
             $('#questionEnd').html('<h4>You got the question wrong!  The answer is ' + trivia[randomQuestion].correctAnswer + '.</h4>');
-            $('#next').append('<img src=' + trivia[randomQuestion].picture + '></img>');
+            var image = $('<img>');
+            image.attr('src',trivia[randomQuestion].picture);
+            image.addClass('img-fluid');
+            $('#next').append(image);
         }
         //Either resets to next question or the game ends
         if(questionNumber < trivia.length) {
