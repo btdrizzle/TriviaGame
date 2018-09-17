@@ -1,6 +1,6 @@
 # TriviaGame
 
-## The theme of the trivia game is Slasher Movie Trivia
+## The theme of the trivia game is Slasher Movies
 
 This trivia game is made with timers to move the game along and make the player think fast.  
 
