@@ -156,7 +156,7 @@ $(document).ready(function() {
         else if(!$("input[name='quiz']:checked").val()) {
             unAnswered++;
             $('#choices').empty();
-            $('#questionEnd').html("<h4>You did't answer!  The answer is " + trivia[randomQuestion].correctAnswer + '.</h4>');
+            $('#questionEnd').html("<h4>You didn't answer!  The answer is " + trivia[randomQuestion].correctAnswer + '.</h4>');
             $('#next').append('<img src=' + trivia[randomQuestion].picture + '></img>');
         }
         else {
